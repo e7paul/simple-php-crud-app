@@ -1,0 +1,29 @@
+services:
+  server:
+    build: .
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+    working_dir: /app
+    entrypoint: "php -S 0.0.0.0:8000"
+    networks:
+      - common
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    networks:
+      - common
+
+networks:
+  common:
+    driver: bridge

@@ -1,0 +1,11 @@
+{
+  "name": "renshu/millenium-test",
+  "autoload": {
+    "psr-4": {
+      "src\\": "./src/"
+    }
+  },
+  "require": {
+    "ext-pdo": "*"
+  }
+}
