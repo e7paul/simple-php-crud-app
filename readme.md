@@ -1,6 +1,7 @@
 Just another simple MVC PHP app.
 
-Запуск: `git clone https://github.com/e7paul/simple-php-crud-app.git && cd "$(basename "$_" .git)" && ./init.sh`
+Запуск:\
+`git clone https://github.com/e7paul/simple-php-crud-app.git && cd "$(basename "$_" .git)" && ./init.sh`
 \
 \
 \
@@ -45,6 +46,6 @@ foreign key (user_id) references main.user (id)
 ```
 Кратко: добавляем `id` в `user_order`, меняем все `id` на тип `bigint unsigned`, добавляем внешние ключи для таблицы `user_order`. Также можно заменить id на uuid/ulid.
 
-2 - Полиморфизм.
-3 - SQL - это язык запросов. MySQL - это система управления БД.
+2 - Полиморфизм.\
+3 - SQL - это язык запросов. MySQL - это система управления БД.\
 4 - Реализовано в одноименном трейте.
